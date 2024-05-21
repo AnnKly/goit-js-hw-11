@@ -1,0 +1,36 @@
+.loader {
+  font-size: 48px;
+  color: #4e75ff;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 20px;
+}
+.loader:after {
+  content: '';
+  height: 4px;
+  width: 0%;
+  display: block;
+  background: #4e75ff;
+  animation: 5s lineGrow linear infinite;
+  margin-top: 15px;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 100%;
+  }
+}
+.position {
+  position: fixed;
+  /*top: 50%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

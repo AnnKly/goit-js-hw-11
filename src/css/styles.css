@@ -5,8 +5,12 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+/*@import url('./vite-promo.css');*/
+/*@import url('./header.css');*/
+@import url('./loader.css');
+
+@import 'izitoast/dist/css/iziToast.min.css';
+@import 'simplelightbox/dist/simple-lightbox.min.css';
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +26,107 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.search-btn {
+  margin-left: 10px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 100px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.search-btn:hover {
+  background-color: #6c8cff;
+}
+.search-input {
+  width: 250px;
+  height: 35px;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.search-input:hover {
+  border-color: rgba(30, 29, 29, 0.504);
+}
+.search-input:focus,
+.search-input:active {
+  border-color: black;
+}
+/** GALLERY **/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 70%;
+  list-style: none;
+  margin: 0 auto;
+  /*display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;*/
+  padding: 0px 156px;
+}
+.photo-container {
+  flex-basis: calc((100% - 48px) / 3);
+  margin: 0;
+  border: 1px solid #808080;
+  max-width: 360px;
+}
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+/** basicLightbox**/
+.basicLightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.basicLightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.photo {
+  height: 200px;
+  width: 360px;
+  /*width: 100%;
+  height: 100%;*/
+  /*border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;*/
 }
